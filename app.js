@@ -18,7 +18,7 @@ var recognizer = new builder.LuisRecognizer('https://westus.api.cognitive.micros
 var intents = new builder.IntentDialog({recognizers:[recognizer]});
 var connector = new builder.ChatConnector({ MicrosoftAppId: process.env.MicrosoftAppId, MicrosoftAppPassword: process.env.MicrosoftAppPassword});
 var bot = new builder.UniversalBot(connector);
-server.post('/api/messages', connector.listen());
+// server.post('/api/messages', connector.listen());
 // var bot = new builder.BotConnectorBot({ appId: process.env.appId, appSecret: process.env.appSecret });
 
 // bot.dialog('/', intents);
@@ -26,6 +26,7 @@ bot.recognizer(new builder.LuisRecognizer('https://westus.api.cognitive.microsof
 
 var companyData = require('./companyData.json');
 
+server.post('/api/messages', connector.listen());
 
 
 bot.dialog('helpDialog', function (session) {
