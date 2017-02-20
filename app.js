@@ -14,7 +14,7 @@ server.listen(process.env.port || 3978, function () {
 var model = process.env.model;
 var recognizer = new builder.LuisRecognizer('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/42d14854-ba6a-43be-9305-bda5458ec2bc?subscription-key=a7f7ce6bdcc74881a44bd9fcee70ea56');
 var intents = new builder.IntentDialog({recognizers:[recognizer]});
-var connector = new builder.ChatConnector({ MicrosoftAppId: '3d5d496d-c70a-4e83-b423-b711db097ba6', MicrosoftAppId: 'oa0kN2GuHrzuCNmx9105mZy'});
+var connector = new builder.ChatConnector({ MicrosoftAppId: process.env.MicrosoftAppId, MicrosoftAppPassword: process.env.MicrosoftAppPassword});
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 // var bot = new builder.BotConnectorBot({ appId: process.env.appId, appSecret: process.env.appSecret });
