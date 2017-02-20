@@ -1,0 +1,48 @@
+{
+    "planned parenthood": {
+        "type": "Family Care Centers",
+        "function": "sex education",
+        "description": "Planned Parenthood Federation of America (PPFA), or Planned Parenthood, is a nonprofit organization that provides reproductive health services in the United States and internationally.",
+        "moreInfo":"A member association of the International Planned Parenthood Federation (IPPF), PPFA has its roots in Brooklyn, New York, where Margaret Sanger opened the first birth control clinic in the U.S. in 1916. In 1921, Sanger founded the American Birth Control League, which changed its name to Planned Parenthood in 1942. Planned Parenthood is made up of 58 affiliates, which operate more than 650 health clinics in the United States, and it also partners with organizations in 12 countries globally.  The organization directly provides a variety of reproductive health services and sexual education, contributes to research in reproductive technology, and does advocacy work aimed at protecting and expanding reproductive rights",
+        "location": "650+ clinic locations, see website for more information",
+        "website": "https://www.plannedparenthood.org"
+  },
+    "alcoholics anonymous": {
+      "type": "Substance Abuse Center",
+      "function": "drug rehabilitation, substance abuse, and codepency support",
+      "description": "Alcoholics Anonymous (AA) is an international mutual aid fellowship founded in 1935 by Bill Wilson and Dr. Bob Smith in Akron, Ohio. AAs stated 'primary purpose' is to help alcoholics 'stay sober and help other alcoholics achieve sobriety'.",
+      "moreInfo":"AAs stated 'primary purpose' is to help alcoholics 'stay sober and help other alcoholics achieve sobriety'.[2][3][4] With other early members Bill Wilson and Bob Smith developed AAs Twelve Step program of spiritual and character development. AAs initial Twelve Traditions were introduced in 1946 to help the fellowship be stable and unified while disengaged from 'outside issues' and influences. The Traditions recommend that members and groups remain anonymous in public media, altruistically helping other alcoholics and avoiding official affiliations with other organization. The Traditions also recommend that those representing AA avoid dogma and coercive hierarchies. Subsequent fellowships such as Narcotics Anonymous have adopted and adapted the Twelve Steps and the Twelve Traditions to their respective primary purposes",
+      "location": "Locations can be found in almost every city.  For local listings try an internet search engine like http://bing.com",
+      "website": "http://www.aa.org/"
+  },
+    "narcotics anonymous": {
+      "type": "Substance Abuse Center",
+      "function": "drug rehabilitation, substance abuse, and codepency support",
+      "description": "Narcotics Anonymous (NA) describes itself as a 'nonprofit fellowship or society of men and women for whom drugs had become a major problem'.",
+      "moreInfo": "Narcotics Anonymous uses a traditional 12-step model that has been expanded and developed for people with varied substance abuse issues and is the second-largest 12-step organization.",
+      "location": "As of May 2014 there were more than 63,000 NA meetings in 132 countries.  For local listings try an internet search engine like http://bing.com",
+      "website": "https://www.na.org/"
+  },
+  "national center for children and families": {
+      "type": "Local Child & Family Services",
+      "function": "Private Domestic Foster Care and Adoption Agencies",
+      "description": "Agencies included on this list have a verified child-placing license in the State or territory in which they are practicing at the time of inclusion in the National Foster Care & Adoption Directory.",
+      "location": "220 I Street NE, Ste 120, Washington, District of Columbia 20002",
+      "website": "http://www.nccf-cares.org/"
+  },
+   "progressive life center": {
+      "type": "Local Child & Family Services",
+      "function": "Kinship,Foster Care and Adoption Support Groups, Private Domestic Foster Care and Adoption Agencies, Private Intercountry Adoption Agencies",
+      "description": "Foster families allow PLC to provide the support and structure that a child needs at this time in a more loving and nurturing environment than an institution.",
+      "location": "1933 Montana Ave., NE, Washington, District of Columbia 20002",
+      "website": "http://www.nccf-cares.org/"
+  },
+   "lutheran social services": {
+      "type": "Local Child & Family Services",
+      "function": "Private Domestic Foster Care and Adoption Agencies, Private Intercountry Adoption Agencies",
+      "description": "Lutheran Social Services of the National Capital Area (LSS/NCA) has devoted nearly a century to walking with those in need throughout the Washington D.C. Metro Area.",
+      "location": "4406 Georgia Avenue NW, Washington, District of Columbia 20011-7124",
+      "website": "http://lssnca.org/"
+  }
+
+}
