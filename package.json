@@ -4,6 +4,7 @@
   "description": "Intelligent counselor for assisting individuals with resources and information related to a variety of personal health topics",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "DXHackers",
