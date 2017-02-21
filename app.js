@@ -20,6 +20,7 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
   
 // Create chat bot
 var connector = new builder.ChatConnector({
+    
     // appId: process.env.MICROSOFT_APP_ID,
     appId: 'b71b29d2-bcba-467c-a4f9-f1e2cbbe61e8',
     appPassword: 'KbCjMJkhzW0c5nSSaVC5ShT'
@@ -40,12 +41,6 @@ bot.recognizer(new builder.LuisRecognizer('https://westus.api.cognitive.microsof
 
 var companyData = require('./companyData.json');
 
-// bot.dialog('start',function (session) {
-//         session.send("Hi, I'm Amy!")
-//         setTimeout(function(){
-//             session.beginDialog('helpDialog');
-//         },1000);  
-//     }).triggerAction({matches: /^hi/i});
 
 bot.dialog('helpDialog', function (session) {
     // Send help message and end dialog.
@@ -137,21 +132,19 @@ bot.dialog('answerDialog',[
 
         var answer = { company: company, value: companyData[company][args.field] };
         var result = answer.value.match( /[^\.!\?]+[\.!\?]+/g );
-        if(result!=null){
-            if(result.length>3){
-                        session.sendTyping();
-                        setTimeout(function()
-                        {
-                            session.send("I'm sorry this history might be a little long...");
-                        }, 1000);
+        if(result.length>2){
+            session.sendTyping();
+            setTimeout(function()
+            {
+                session.send("I'm sorry this history might be a little long...");
+            }, 1000);
 
-                        setTimeout(function(){
-                            session.send("But you asked for it =P");},2000);
-                            session.sendTyping();
-                        setTimeout(function(){
-                            session.endDialog(args.template,answer);
-                        },5000);
-                    }
+            setTimeout(function(){
+                session.send("But you asked for it =P");},2000);
+
+            setTimeout(function(){
+                session.endDialog(args.template,answer);
+            },5000);
         }
         else{
             session.endDialog(args.template,answer);
