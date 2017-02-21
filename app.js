@@ -44,9 +44,9 @@ bot.dialog('/',
 
     function (session) {
         session.send("Hi, I'm Amy!")
-        setTimeout(function(){
+        // setTimeout(function(){
             session.beginDialog('helpDialog');
-        },1000);  
+        // },1000);  
     }).triggerAction({matches: /^hi/i});
 
 bot.dialog('helpDialog', function (session) {
