@@ -40,12 +40,12 @@ bot.recognizer(new builder.LuisRecognizer('https://westus.api.cognitive.microsof
 
 var companyData = require('./companyData.json');
 
-bot.dialog('start',function (session) {
-        session.send("Hi, I'm Amy!")
-        setTimeout(function(){
-            session.beginDialog('helpDialog');
-        },1000);  
-    }).triggerAction({matches: /^hi/i});
+// bot.dialog('start',function (session) {
+//         session.send("Hi, I'm Amy!")
+//         setTimeout(function(){
+//             session.beginDialog('helpDialog');
+//         },1000);  
+//     }).triggerAction({matches: /^hi/i});
 
 bot.dialog('helpDialog', function (session) {
     // Send help message and end dialog.
