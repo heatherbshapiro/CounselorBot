@@ -20,13 +20,14 @@
       "function": "drug rehabilitation, substance abuse, and codepency support",
       "description": "Narcotics Anonymous (NA) describes itself as a 'nonprofit fellowship or society of men and women for whom drugs had become a major problem'.",
       "moreInfo": "Narcotics Anonymous uses a traditional 12-step model that has been expanded and developed for people with varied substance abuse issues and is the second-largest 12-step organization.",
-      "location": "As of May 2014 there were more than 63,000 NA meetings in 132 countries.  For local listings try an internet search engine like http://bing.com",
+      "location": "As of May 2014 there were more than 63,000 NA meetings in 132 countries.  For local listings try searching http://nycna.org/find-a-meeting.",
       "website": "https://www.na.org/"
   },
   "national center for children and families": {
       "type": "Local Child & Family Services",
       "function": "Private Domestic Foster Care and Adoption Agencies",
       "description": "Agencies included on this list have a verified child-placing license in the State or territory in which they are practicing at the time of inclusion in the National Foster Care & Adoption Directory.",
+      "moreInfo": "The NCCF utilizes a four-pronged approach to work in the Washington metropolitan area: community supports, education and training, volunteerism, and social advocacy. They have over 20 programs that primarily operate under four main service divisions: Adolescent Services, Community Based Services, Family Services, and Foster Care and Adoption Services",
       "location": "220 I Street NE, Ste 120, Washington, District of Columbia 20002",
       "website": "http://www.nccf-cares.org/"
   },
@@ -34,6 +35,7 @@
       "type": "Local Child & Family Services",
       "function": "Kinship,Foster Care and Adoption Support Groups, Private Domestic Foster Care and Adoption Agencies, Private Intercountry Adoption Agencies",
       "description": "Foster families allow PLC to provide the support and structure that a child needs at this time in a more loving and nurturing environment than an institution.",
+      "moreInfo": "Please check out http://www.nccf-cares.org/ for more info.",
       "location": "1933 Montana Ave., NE, Washington, District of Columbia 20002",
       "website": "http://www.nccf-cares.org/"
   },
@@ -41,6 +43,7 @@
       "type": "Local Child & Family Services",
       "function": "Private Domestic Foster Care and Adoption Agencies, Private Intercountry Adoption Agencies",
       "description": "Lutheran Social Services of the National Capital Area (LSS/NCA) has devoted nearly a century to walking with those in need throughout the Washington D.C. Metro Area.",
+      "moreInfo": "Please check out http://lssnca.org/ for more info.",
       "location": "4406 Georgia Avenue NW, Washington, District of Columbia 20011-7124",
       "website": "http://lssnca.org/"
   }
