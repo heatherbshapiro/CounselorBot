@@ -132,7 +132,7 @@ bot.dialog('answerDialog',[
 
         var answer = { company: company, value: companyData[company][args.field] };
         var result = answer.value.match( /[^\.!\?]+[\.!\?]+/g );
-        if(result.length>2){
+        if(result.length>3 && args.field == "moreInfo"){
             session.sendTyping();
             setTimeout(function()
             {
