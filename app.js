@@ -48,6 +48,10 @@ bot.dialog('start',function (session) {
         },1000);  
     }).triggerAction({matches: /^hi/i});
 
+bot.dialog('learning', function(session){
+    session.send("I'm sorry, I'm still learning. Please try asking a different way. :) ")
+}).triggerAction({matches:'None'});
+
 bot.dialog('helpDialog', function (session) {
     // Send help message and end dialog.
     session.endDialog(prompts.helpMessage);
