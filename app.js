@@ -21,10 +21,10 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 // Create chat bot
 var connector = new builder.ChatConnector({
     
-    // appId: null,
-    appId: 'b71b29d2-bcba-467c-a4f9-f1e2cbbe61e8',
-    appPassword: 'KbCjMJkhzW0c5nSSaVC5ShT'
-    // appPassword: null
+    appId: null,
+    // appId: 'b71b29d2-bcba-467c-a4f9-f1e2cbbe61e8',
+    // appPassword: 'KbCjMJkhzW0c5nSSaVC5ShT'
+    appPassword: null
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
@@ -89,7 +89,9 @@ bot.dialog('helpDialog', function (session) {
         builder.Prompts.choice(session,prompts.serviceUnknown, companyData);
     }
     else{
-        session.endDialog(prompts.helpMessage);
+        session.send(prompts.helpMessage.split(".")[0])
+        session.send(prompts.helpMessage.split("topics.")[1].split("Once")[0])
+        session.endDialog(prompts.helpMessage.split("topics.")[1].split("about?'")[1]);
     }
 }).triggerAction({ matches: 'Help' });
 
