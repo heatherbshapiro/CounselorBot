@@ -21,10 +21,10 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 // Create chat bot
 var connector = new builder.ChatConnector({
     
-    // appId: process.env.MICROSOFT_APP_ID,
-    appId: 'b71b29d2-bcba-467c-a4f9-f1e2cbbe61e8',
-    appPassword: 'KbCjMJkhzW0c5nSSaVC5ShT'
-    // appPassword: process.env.MICROSOFT_APP_PASSWORD
+    appId: null,
+    // appId: 'b71b29d2-bcba-467c-a4f9-f1e2cbbe61e8',
+    // appPassword: 'KbCjMJkhzW0c5nSSaVC5ShT'
+    appPassword: null
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
@@ -46,7 +46,37 @@ bot.dialog('start',function (session) {
         setTimeout(function(){
             session.beginDialog('helpDialog');
         },1000);  
-    }).triggerAction({matches: /^hi/i});
+    }).triggerAction({matches:'Greetings'});
+
+bot.dialog('end',function (session) {
+        session.send("Hope you have a great day.")
+        setTimeout(function(){
+            session.endConversation("Chat with you soon :)")
+        },1000);  
+    }).triggerAction({matches:'Ending'});
+
+var welcomeOptions = ["You got it!","Don't mention it :)","No worries :)","It was nothing!","No problem, I'm happy to help!", "Of course!", "That's what I'm here for!","I'm glad I could help", "You're welcome!"];
+var rand;
+
+bot.dialog('thanks',function(session,results){
+    rand = welcomeOptions[Math.floor(Math.random() * welcomeOptions.length)],
+    session.send(rand)
+    session.send("Do you need help with anything else?")
+    session.beginDialog('needMoreHelp');
+}).triggerAction({matches: /^Thanks/i});
+    
+bot.dialog('needMoreHelp', new builder.IntentDialog()
+    .matches(/^yes/i, [
+            function (session) {
+                session.send("Awesome!")
+                session.beginDialog('helpDialog');
+            }
+    ])
+    .matches(/^no/i, [
+        function(session){
+            session.beginDialog('end')
+        }
+    ]))
 
 bot.dialog('learning', function(session){
     session.send("I'm sorry, I'm still learning. Please try asking a different way. :) ")
@@ -54,7 +84,13 @@ bot.dialog('learning', function(session){
 
 bot.dialog('helpDialog', function (session) {
     // Send help message and end dialog.
-    session.endDialog(prompts.helpMessage);
+    if(session.privateConversationData.company){
+        // session.endDialog(prompts.serviceUnknown,companyData);
+        builder.Prompts.choice(session,prompts.serviceUnknown, companyData);
+    }
+    else{
+        session.endDialog(prompts.helpMessage);
+    }
 }).triggerAction({ matches: 'Help' });
 
 bot.dialog('briefInfo',function(session,args){

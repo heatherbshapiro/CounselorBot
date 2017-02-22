@@ -1,5 +1,5 @@
 module.exports = {
-    helpMessage: "I can help you find resources and information related to a variety of personal health topics . Here are some of the things you can ask me:\n\n" +
+    helpMessage: "I can help you find resources and information related to a variety of personal health topics. Here are some of the things you can ask me:\n\n" +
     "* 'tell me about Planned Parenthood'\n" +
     "* 'what does Alcoholics Anonymous do?'\n" +
     "* 'where can I find a Narcotics Anonymous group?'\n" +
